@@ -19,6 +19,6 @@ for child in osm:
             t.set('v', newh)
             # mark element as modified.
             child.set('action', 'modify')
-        except:
+        except: # should only be child ways of relations
             print(child.get('id'))
 tree.write(outfile)

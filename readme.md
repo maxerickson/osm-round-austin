@@ -3,3 +3,5 @@ Scripts to mechanically edit poorly formatted building heights from the [Austin,
 fetch.sh pulls data from Overpass-Api using this query: http://overpass-turbo.eu/s/ksJ and stores it in buildings.osm.
 
 round.py reads buildings.osm and rounds the height values to 2 digits, saving the modified data in rounded_buildings.osm.
+
+The changes in rounded_buildings.osm can be commited to OSM by opening the file in JOSM and uploading.

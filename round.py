@@ -16,13 +16,8 @@ for child in elem:
             newh='%.2f' % float(h)
             rounds.write(h+' '+newh+'\n')
             t.set('v', newh)
-            # increment version, delete attributes of previous version.
-            v=int(child.get('version'))
-            child.set('version', str(v+1))
-            child.attrib.pop('user')
-            child.attrib.pop('uid')
-            child.attrib.pop('changeset')
-            child.attrib.pop('timestamp')
+            # mark element as modified.
+            child.set('action', 'modify')
         except:
-            pass
+            print(child.get('id'))
 tree.write(outfile)

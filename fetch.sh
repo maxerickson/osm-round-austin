@@ -1,0 +1,1 @@
+curl -o buildings.osm http://overpass-api.de/api/interpreter?data=%5Bbbox%3A30.1327%2C-97.9857%2C30.4972%2C-97.4844%5D%3B%0A%28%0Anode%5Bheight~%22%5B0-9%5D%7B5%2C%7D%22%5D%3B%0Away%5Bheight~%22%5B0-9%5D%7B5%2C%7D%22%5D%3B%0Arel%5Bheight~%22%5B0-9%5D%7B5%2C%7D%22%5D%3B%0A%29%3B%0A%28._%3B%3E%3B%29%3B%0Aout%20meta%3B

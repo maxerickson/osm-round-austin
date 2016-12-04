@@ -6,8 +6,9 @@ outfile="rounded_buildings.osm"
 rounds=open("rounding.txt", "w")
 
 tree=ElementTree.parse(infile)
-elem=tree.getroot()
-for child in elem:
+osm=tree.getroot()
+osm.set('generator', 'round.py')
+for child in osm:
     if child.tag in {"way","relation"}:
         try:
             # round the height.

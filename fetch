@@ -1,0 +1,6 @@
+#! /bin/bash
+fname="$(basename $1 .overpass)"
+payload=$(<$1)
+payload="data=$payload"
+echo $payload
+curl -o $fname.osm -g http://overpass-api.de/api/interpreter --data-urlencode "$payload"

@@ -1,5 +1,5 @@
 #! /bin/bash
-fname="$(basename $1 .overpass)"
+fname="$(basename $1 .overpassql)"
 payload=$(<$1)
 payload="data=$payload"
 echo $payload
